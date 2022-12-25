@@ -1,21 +1,18 @@
 #!bin/bash/
 
 # Remove bloat
-sudo apt-get remove -y libreoffice* thingy rhythmbox thunderbird hexchat \
-	 openvpn redshift timeshift pidgin transmission
+sudo apt purge -y libreoffice* thingy rhythmbox thunderbird hexchat
+sudo apt purge -y openvpn redshift timeshift pidgin transmission celluloid
+sudo apt purge -y warpinator mintwelcome mintupgrade mintbackup webapps-manager
+sudo apt purge -y xfce4-dict hypnotix drawing simple-scan sticky evolution
+sudo apt purge -y onboard
 
 # Finish removal
-sudo apt-get autopurge && sudo apt-get autoremove && sudo apt-get autoclean
+sudo apt-get autopurge -y && sudo apt-get autoremove -y
+sudo apt-get autoclean -y
 
 # Install basics
 sudo apt-get install git firefox make
 
-# Install gnome
-sudo apt-get install gnome
-sudo apt-get autopurge && sudo apt-get autoremove
-
-# Update and reboot
+# Update
 sudo apt-get update && sudo apt-get upgrade -y
-echo Done!
-sleep 10
-sudo reboot now
