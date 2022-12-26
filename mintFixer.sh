@@ -5,7 +5,8 @@ sudo apt purge -y libreoffice* rhythmbox thunderbird hexchat
 sudo apt purge -y redshift timeshift pidgin transmission-gtk celluloid
 sudo apt purge -y warpinator mintwelcome mintupgrade mintbackup webapp-manager
 sudo apt purge -y xfce4-dict hypnotix drawing simple-scan sticky evolution
-sudo apt purge -y onboard pix synaptic catfish
+sudo apt purge -y onboard pix synaptic catfish gucharmap xreader gedit
+sudo apt purge -y xviewer evince xed
 
 # Finish removal
 sudo apt autopurge -y && sudo apt autoremove -y
