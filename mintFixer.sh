@@ -7,7 +7,7 @@ sudo apt purge -y warpinator* mintwelcome mintupgrade mintbackup webapp-manager*
 sudo apt purge -y xfce4-dict* hypnotix* drawing* simple-scan* sticky* evolution*
 sudo apt purge -y onboard* pix* synaptic* catfish* gucharmap* xreader* gedit*
 sudo apt purge -y xviewer* evince* xed* light-locker-settings* seahorse* mugshot*
-sudo apt purge -y logs* vim* yelp* cheese*
+sudo apt purge -y vim* yelp* cheese* xreader* disks*
 
 # Finish removal
 sudo apt autopurge -y && sudo apt autoremove -y
