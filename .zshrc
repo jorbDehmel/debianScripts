@@ -1,5 +1,10 @@
 # Created by newuser for 5.9
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+. "$HOME/.cargo/env"
+alias pydoc='python3 -m pydoc'
+alias prism='/home/jorb/Programs/prism-4.9-linux64-x86/bin/prism'
+alias xprism='/home/jorb/Programs/prism-4.9-linux64-x86/bin/xprism'
+alias pico8='/home/jorb/Programs/pico-8/pico8'
 
 git_branch() {
   OUT=$(git branch --show 2> /dev/null)
@@ -29,3 +34,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt SHARE_HISTORY
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

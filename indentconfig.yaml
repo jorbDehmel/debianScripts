@@ -3,3 +3,8 @@ modifyLineBreaks:
     columns: 64
     comments:
       wrap: 1
+defaultIndent: "    "
+noIndentBlock:
+  custom:
+    begin: \R\h*%\hfmt:\hoff
+    end: '%\hfmt:\hon'
