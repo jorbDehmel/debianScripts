@@ -38,3 +38,18 @@ setopt SHARE_HISTORY
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
+
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BATT|grep -E "state|to\
+full|percentage"'
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/jorb/.juliaup/bin' $path)
+export PATH
+# Tab completion for juliaup and julia channel selection
+[ -f "/home/jorb/.julia/juliaup/completions/zsh.zsh" ] && source "/home/jorb/.julia/juliaup/completions/zsh.zsh"
+
+# <<< juliaup initialize <<<

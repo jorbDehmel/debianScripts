@@ -6,8 +6,10 @@
  '(custom-enabled-themes '(tango-dark))
  '(desktop-save-mode t)
  '(global-display-line-numbers-mode t)
+ '(minimap-hide-scroll-bar nil)
+ '(minimap-window-location 'right)
  '(package-selected-packages
-   '(neotree projectile clang-format lsp-treemacs lsp-ui lsp-mode flycheck multiple-cursors))
+   '(good-scroll smooth-scroll minimap trailing-newline-indicator ## pdf-tools company neotree projectile clang-format lsp-treemacs lsp-ui lsp-mode flycheck multiple-cursors))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
@@ -17,7 +19,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(minimap-active-region-background ((t (:extend t)))))
 (setq-default indent-tabs-mode nil)
 
 (require 'package)
@@ -38,4 +40,13 @@
 (setq clang-format-style "file")
 
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
+(add-hook 'c++-mode-hook 'lsp-mode)
+
 (setq warning-minimum-level :emergency)
+
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(setopt display-fill-column-indicator-column 64)
+(global-auto-revert-mode t)
+
+(set-face-attribute 'default nil :height 130)
+(good-scroll-mode 1)
